@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*
 function Init() {
 
 	var screenSize = screen.width + "x" + screen.height;
@@ -79,16 +80,8 @@ function Init() {
 		}
 	};
 	return pendoVariableInitialization;
-}
-
-function onPendo1() {
-												console.log(pendo);
-												pendo.track("Pendo Track 1", {
-														title: "Pendo Track 1",
-														color: "red",
-														team: "Wildlings"
-												});
-										};
+};
+*/
 
 document.addEventListener('DOMContentLoaded', function () {
   var collection = $('#main > .special > .major:nth-child(1):first');

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Events</title>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link href='/css/events/common.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="nav-ms" style="background:#F7F7F7;">
+    <div class="container body">
+        <div class="main_container">
+            <div class="right_col" role="main">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h1 class="jss123">Testing Track Events</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="x_title">
+                            <h2>Pendo Track</h2>
+                            <p>Requires Agent version 2.14.3</p>
+                        </div>
+                        <div class="x_content">
+                            <button type="button" onclick="onPendo1()" class="btn pendo-1">Pendo 1</button><br><br>
+                            <button type="button" onclick="onPendo2()" class="btn pendo-2">Pendo 2</button><br><br>
+                            <button type="button" onclick="onPendo3()" class="btn pendo-3">Pendo 3</button><br><br>
+                            <button type="button" onclick="onPendo4()" class="btn pendo-4">Pendo 4</button><br><br>
+                            <button type="button" onclick="onPendo5()" class="btn pendo-5">Pendo 5</button><br><br>
+                            <button type="button" onclick="onPendo6()" class="jss600">Pendo 6</button><br><br>
+                        </div>
+                    </div>
+                </div>
+
+<script>
+
+    (function(apiKey){
+        (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+        v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+            o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+            y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+            z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+            // Call this whenever information about your visitors becomes available
+            // Please use Strings, Numbers, or Bools for value types.
+            pendo.initialize({
+                visitor: {
+                    id:              'chantelle'   // Required if user is logged in
+                    // email:        // Optional
+                    // role:         // Optional
+
+                    // You can add any additional visitor level key-values here,
+                    // as long as it's not one of the above reserved names.
+                },
+
+                account: {
+                    id:           'acct1' // Highly recommended
+                    // name:         // Optional
+                    // planLevel:    // Optional
+                    // planPrice:    // Optional
+                    // creationDate: // Optional
+
+                    // You can add any additional account level key-values here,
+                    // as long as it's not one of the above reserved names.
+                }
+            });
+    })('23165f72-11c1-4001-4c62-c9f18d732bb2');
+    </script>
+
+
+
+
+                <script>
+                    function randomNumber(n) {
+                        return Math.floor(Math.random()* n) + 1;
+                    }
+
+                    function onPendo1() {
+                        console.log("track1");
+                        pendo.track("Pendo Track 1", {
+                            title: "Pendo Track 1",
+                            color: "red",
+                            team: "Wildlings"
+                        });
+                    }
+
+                    function onPendo2() {
+                      console.log("track2")
+                        var x = randomNumber(100);
+                        pendo.track("Pendo Track 2", {
+                            title: "Pendo Track 2",
+                            color: "blue",
+                            team: "Scrumbledores",
+                            random: x
+                        });
+                    }
+
+                    function onPendo3() {
+                      console.log("track3")
+                        pendo.track("Pendo Track 3", {
+                            title: "Pendo Track 3",
+                            color: "green",
+                            team: "Batman"
+                        });
+                    }
+
+                    function onPendo4() {
+                      console.log("track4")
+                        pendo.track("Pendo Track 4", {
+                            title: "Pendo Track 4",
+                            color: "yellow",
+                            team: "Ion Chefs"
+                        });
+                    }
+
+                    function onPendo5() {
+                      console.log("track5")
+                        pendo.track("Pendo Track 5", {
+                            title: "Pendo Track 5",
+                            color: "orange",
+                            team: "Atlas"
+                        });
+                    }
+
+                    function onPendo6() {
+                      console.log("track6")
+                        pendo.track("Pendo Track 6", {
+                            title: "Pendo Track 6",
+                            color: "magenta",
+                            team: "Cerberus"
+                        });
+                    }
+
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
