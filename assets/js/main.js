@@ -6,6 +6,11 @@
 
 function Init() {
 
+	pendo.track("Registered", {
+	plan: "Pro Annual",
+	accountType: "Facebook"
+	});
+
 	var screenSize = screen.width + "x" + screen.height;
 	var w = window,
 	        d = document,
@@ -76,12 +81,7 @@ function Init() {
 			guidesFailed: function printStuffFailed() {
 				console.log("Your pendo guides have timed out.");
 			}
-		},
-
-		pendo.track("Registered", {
-  	plan: "Pro Annual",
-  	accountType: "Facebook"
-		})
+		}
 	};
 	return pendoVariableInitialization;
 }
