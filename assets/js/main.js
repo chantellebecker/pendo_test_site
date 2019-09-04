@@ -36,15 +36,6 @@ function Init() {
 		}
 	}
 
-	function onPendo1() {
-	                        console.log(pendo);
-	                        pendo.track("Pendo Track 1", {
-	                            title: "Pendo Track 1",
-	                            color: "red",
-	                            team: "Wildlings"
-	                        });
-	                    }
-
 	var newDateClass = new Date();
 	var accountIdPlaceholder = newDateClass.getDay();
 	var accountString = accountIdPlaceholder.toString() + "//" + (randomVisitor % 5).toString()
@@ -89,6 +80,15 @@ function Init() {
 	};
 	return pendoVariableInitialization;
 }
+
+function onPendo1() {
+												console.log(pendo);
+												pendo.track("Pendo Track 1", {
+														title: "Pendo Track 1",
+														color: "red",
+														team: "Wildlings"
+												});
+										};
 
 document.addEventListener('DOMContentLoaded', function () {
   var collection = $('#main > .special > .major:nth-child(1):first');
