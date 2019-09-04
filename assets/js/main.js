@@ -6,11 +6,6 @@
 
 function Init() {
 
-	pendo.track("Registered", {
-	plan: "Pro Annual",
-	accountType: "Facebook"
-	});
-
 	var screenSize = screen.width + "x" + screen.height;
 	var w = window,
 	        d = document,
@@ -40,6 +35,15 @@ function Init() {
 			return "Non-Admin";
 		}
 	}
+
+	function onPendo1() {
+	                        console.log(pendo);
+	                        pendo.track("Pendo Track 1", {
+	                            title: "Pendo Track 1",
+	                            color: "red",
+	                            team: "Wildlings"
+	                        });
+	                    }
 
 	var newDateClass = new Date();
 	var accountIdPlaceholder = newDateClass.getDay();
