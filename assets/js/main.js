@@ -65,6 +65,7 @@ function Init() {
 		parentAccount: {
 			id: null
 		},
+
 		events: {
 			ready: function printStuffReady() {
 				console.log("pendo is ready!");
@@ -75,7 +76,12 @@ function Init() {
 			guidesFailed: function printStuffFailed() {
 				console.log("Your pendo guides have timed out.");
 			}
-		}
+		},
+
+		pendo.track("Registered", {
+  	plan: "Pro Annual",
+  	accountType: "Facebook"
+		})
 	};
 	return pendoVariableInitialization;
 }
