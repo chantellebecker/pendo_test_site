@@ -2918,6 +2918,10 @@
 						background-color: #ffffff;
 						box-shadow: none;
 					}
+					
+					#nav ul li a #displayNone {
+						display:none;
+					}
 
 		#nav.alt {
 			position: fixed;
@@ -3514,7 +3518,5 @@
 	background-color: #f7f7f7;
 }
 
-#displayNone {
-	display:none;
-}
+
 
