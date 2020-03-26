@@ -3509,5 +3509,12 @@
 	text-shadow:0px 1px 0px #ffffff;
 }
 
+#invisible {
+	color: #f7f7f7;
+	background-color: #f7f7f7;
+}
 
+#displayNone {
+	display:none;
+}
 
