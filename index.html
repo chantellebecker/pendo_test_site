@@ -39,7 +39,7 @@
 		        pendo.initialize({
 			    additionalApiKeys: ['ecb0e9b8-105a-45ed-704c-6993b9813824'],
 		            visitor: {
-		                id:              'Chantelle-Test'  // Required if user is logged in
+		                id:              'VisitorAcme'  // Required if user is logged in
 		                // email:        // Optional
 		                // role:        'pendozer' 
 
@@ -48,7 +48,7 @@
 		            },
 
 		            account: {
-		                id:           'it-me' // Highly recommended
+		                id:           'AccountAcme' // Highly recommended
 		                // name:         // Optional
 		                // planLevel:    // Optional
 		                // planPrice:    // Optional
@@ -56,7 +56,14 @@
 
 		                // You can add any additional account level key-values here,
 		                // as long as it's not one of the above reserved names.
-		            }
+		            },
+
+			    parentAccount: {
+			      id:           'ParentAcme'
+			      // name:         // Optional
+			      // You can add any additional master account level
+			      // key-values here.
+			    }
 		        });
 		})('23165f72-11c1-4001-4c62-c9f18d732bb2');
 
