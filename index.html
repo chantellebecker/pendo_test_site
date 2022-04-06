@@ -37,9 +37,8 @@
 		        // Call this whenever information about your visitors becomes available
 		        // Please use Strings, Numbers, or Bools for value types.
 		        pendo.initialize({
-			    additionalApiKeys: ['ecb0e9b8-105a-45ed-704c-6993b9813824'],
 		            visitor: {
-		                id:              'VisitorBeta1',
+		                id:              '1234',
 				country: 	'New Zealand',
 		                email:        'test@test.com'
 		                // role:        'pendozer' 
@@ -49,7 +48,7 @@
 		            },
 
 		            account: {
-		                id:           'AccountBeta2' // Highly recommended
+		                id:           'Account2' // Highly recommended
 		                // name:         // Optional
 		                // planLevel:    // Optional
 		                // planPrice:    // Optional
@@ -57,21 +56,9 @@
 
 		                // You can add any additional account level key-values here,
 		                // as long as it's not one of the above reserved names.
-		            },
-
-			    parentAccount: {
-			      id:           'ParentBeta'
-			      // name:         // Optional
-			      // You can add any additional master account level
-			      // key-values here.
-			    }
+		            }
 		        });
-			pendo.updateOptions({
-				    visitor: {
-					country:              'USA'   // visitor id of who you are logged in as
-				    }
-				});
-		})('23165f72-11c1-4001-4c62-c9f18d732bb2');
+		})('ba162a50-94d9-464d-42a8-065179534554');
 
 		function onPendo1() {
 														console.log("track successful")
